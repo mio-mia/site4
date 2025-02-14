@@ -1,0 +1,15 @@
+
+@font-face {
+  font-family: 'LonginesSans_M';
+  src: url(../font/LonginesSansMedium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'LonginesSans_B';
+  src: url(../font/LonginesSansBold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'LonginesSerif_B';
+  src: url(../font/LonginesSerifBold.woff2) format('woff2');
+}
