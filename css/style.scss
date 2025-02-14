@@ -15,8 +15,8 @@ $footer-height: 190px;
 
 /* 고정값(color) */
 $deep-gray: #222222;
-$deep-blue: #012d50;
-$light-blue: #3d9ce3;
+$deep-blue: #500101;
+$light: #9e0000;
 $ultra-light-grey: #f4f4f4; // header:hover background
 
 /* 고정값(font) */
@@ -43,8 +43,10 @@ header{
     display: flex; justify-content: space-between; align-items: center;
     flex-direction: row;
     h1{width: 20%; height: 50px; margin-top: 12px;
-      background: url('../img/vetus-white.png') no-repeat center center;
-      background-size: 54%;}
+      position: relative; z-index: 1;}
+    h1 p{width: 100%; height: 100%;
+      display: flex; justify-content: center; align-items: center;
+      font-size: 2.4em; font-family: $eng-point;}
     .Toolbar{width: 100%; height: 40px; padding-top: 10px; display: flex; 
       &.left{justify-content: flex-start;}
       &.right{justify-content: flex-end;}
@@ -73,35 +75,33 @@ header:hover{
   color: $deep-blue;
   &::before{height: 100%;}
   #head-top{
-    h1{background: url('../img/vetus-black.png') no-repeat center center; background-size: 54%;}
     .Toolbar{
-      li:hover{color: $deep-gray;}
-      .icon.arrow{background: url(../img/down-navy.png) no-repeat center; background-size: contain;}
-      .icon.search{background: url(../img/search-navy.png) no-repeat center; background-size: contain;}
-      .icon.store{background: url(../img/store-navy.png) no-repeat center; background-size: contain;}
-      .icon.login{background: url(../img/login-navy.png) no-repeat center; background-size: contain;}
-      .icon.cart{background: url(../img/cart-navy.png) no-repeat center; background-size: contain;}
-      .icon.arrow:hover{background: url(../img/down-skyblue.png) no-repeat center; background-size: contain;}
-      .icon.search:hover{background: url(../img/search-skyblue.png) no-repeat center; background-size: contain;}
-      .icon.store:hover{background: url(../img/store-skyblue.png) no-repeat center; background-size: contain;}
-      .icon.login:hover{background: url(../img/login-skyblue.png) no-repeat center; background-size: contain;}
-      .icon.cart:hover{background: url(../img/cart-skyblue.png) no-repeat center; background-size: contain;}
+      li:hover{color: $light;}
+      .icon.arrow{background: url(../img/down-darkred.png) no-repeat center; background-size: contain;}
+      .icon.search{background: url(../img/search-darkred.png) no-repeat center; background-size: contain;}
+      .icon.store{background: url(../img/store-darkred.png) no-repeat center; background-size: contain;}
+      .icon.login{background: url(../img/login-darkred.png) no-repeat center; background-size: contain;}
+      .icon.cart{background: url(../img/cart-darkred.png) no-repeat center; background-size: contain;}
+      .icon.arrow:hover{background: url(../img/down-red.png) no-repeat center; background-size: contain;}
+      .icon.search:hover{background: url(../img/search-red.png) no-repeat center; background-size: contain;}
+      .icon.store:hover{background: url(../img/store-red.png) no-repeat center; background-size: contain;}
+      .icon.login:hover{background: url(../img/login-red.png) no-repeat center; background-size: contain;}
+      .icon.cart:hover{background: url(../img/cart-red.png) no-repeat center; background-size: contain;}
     }
   }
-  #head-bottom li:hover{color: $deep-gray;}
+  #head-bottom li:hover{color: $light;}
 } // header:hover
 
 header.scrolled{
   color: $deep-blue;
   &::before{height: 100%;}
   #head-top{
-    h1{background: url('../img/vetus-black.png') no-repeat center center; background-size: 54%;}
     .Toolbar{
-      .icon.arrow{background: url(../img/down-navy.png) no-repeat center; background-size: contain;}
-      .icon.search{background: url(../img/search-navy.png) no-repeat center; background-size: contain;}
-      .icon.store{background: url(../img/store-navy.png) no-repeat center; background-size: contain;}
-      .icon.login{background: url(../img/login-navy.png) no-repeat center; background-size: contain;}
-      .icon.cart{background: url(../img/cart-navy.png) no-repeat center; background-size: contain;}
+      .icon.arrow{background: url(../img/down-darkred.png) no-repeat center; background-size: contain;}
+      .icon.search{background: url(../img/search-darkred.png) no-repeat center; background-size: contain;}
+      .icon.store{background: url(../img/store-darkred.png) no-repeat center; background-size: contain;}
+      .icon.login{background: url(../img/login-darkred.png) no-repeat center; background-size: contain;}
+      .icon.cart{background: url(../img/cart-darkred.png) no-repeat center; background-size: contain;}
     }
   } // #head-top
 } // header.scrolled
@@ -241,7 +241,7 @@ header.scrolled{
       flex-direction: column; text-align: center;
       span{display: block;
         width: 100%; height: fit-content; margin-bottom: 10px;
-        color: $light-blue; font-size: 14px; font-weight: 700;}
+        color: $light; font-size: 14px; font-weight: 700;}
       h3{width: 100%; height: fit-content; margin-bottom: 10px;
         font-size: 12px; line-height: 1.3; font-weight: 700;}
       .sub{width: 100%; height: fit-content; margin-bottom: 10px;}
@@ -283,7 +283,7 @@ header.scrolled{
 
     .info{width: 35%; height: 100%;
       display: flex; justify-content: center; align-items: center;}
-    ul{width: 100%; height: fit-content; padding-left: 20px;
+    ul{width: 100%; height: fit-content; padding-left: 30px;
       display: flex; flex-direction: column;}
     li{width: fit-content; height: fit-content;}
     h5{font-size: 14px; margin-bottom: 30px;}
@@ -311,19 +311,19 @@ footer{
       .dep-a{width: 18.75%; height: $footer-height; padding-left: 15px;
         li{width: fit-content; margin-bottom: 15px;
           font-size: 18px; line-height: 1.8; font-weight: 700;}
-        li:hover{color: $light-blue;}
+        li:hover{color: $light;}
       } // .dep-a
       .dep-b{width: 18.75%; height: $footer-height; padding-left: 15px;
         li{width: fit-content; margin-bottom: 15px;
           font-size: 14px; line-height: 1.4; font-weight: 500;}
-        li:hover{color: $light-blue;}
+        li:hover{color: $light;}
       } // .dep-b
       .info{width: 37.5%; height: $footer-height; padding-left: 15px;
         .left{float: left; width: 50%;}
         .right{float: left; width: 50%;}
         li{width: fit-content; margin-bottom: 15px;
           font-size: 14px; line-height: 1.4; font-weight: 500;}
-        li:hover{color: $light-blue;}
+        li:hover{color: $light;}
       } // .info
       .letter{width: 25%; height: $footer-height; padding-left: 15px;
         p{width: 100%; padding: 5px 0 11px; font-weight: 700;}
@@ -349,7 +349,7 @@ footer{
       font-size: 11px; color: #666666;
       .btns{width: fit-content; height: fit-content; line-height: 1.4;
         color: #000; font-size: 14px; border-bottom: 1px solid #d2d2d2;}
-      .btns:hover{color: $light-blue; border-color: $light-blue;}
+      .btns:hover{color: $light; border-color: $light;}
       .join p{float: left; font-size: 12px; margin-right: 25px; line-height: 1.2;}
       .join ul{float: left;
         display: flex; justify-content: space-between; align-items: center;
@@ -358,7 +358,7 @@ footer{
         margin-right: 30px; padding-bottom: 4px;
         border-bottom: 1px solid #d2d2d2;
         font-size: 15px; color: #252525; font-weight: 700;}
-      .join li:hover{color: $light-blue; border-color: $light-blue;}
+      .join li:hover{color: $light; border-color: $light;}
     } // #copy
     #license{margin: 12px 0; line-height: 1.4; font-size: 11px; color: #666666;}
   } // #footer-bottom

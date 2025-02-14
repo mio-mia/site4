@@ -65,8 +65,17 @@ header #head-top h1 {
   width: 20%;
   height: 50px;
   margin-top: 12px;
-  background: url("../img/vetus-white.png") no-repeat center center;
-  background-size: 54%;
+  position: relative;
+  z-index: 1;
+}
+header #head-top h1 p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4em;
+  font-family: "LonginesSerif_B", "Georgia";
 }
 header #head-top .Toolbar {
   width: 100%;
@@ -145,90 +154,82 @@ header #head-bottom a {
 }
 
 header:hover {
-  color: #012d50;
+  color: #500101;
 }
 header:hover::before {
   height: 100%;
 }
-header:hover #head-top h1 {
-  background: url("../img/vetus-black.png") no-repeat center center;
-  background-size: 54%;
-}
 header:hover #head-top .Toolbar li:hover {
-  color: #222222;
+  color: #9e0000;
 }
 header:hover #head-top .Toolbar .icon.arrow {
-  background: url(../img/down-navy.png) no-repeat center;
+  background: url(../img/down-darkred.png) no-repeat center;
   background-size: contain;
 }
 header:hover #head-top .Toolbar .icon.search {
-  background: url(../img/search-navy.png) no-repeat center;
+  background: url(../img/search-darkred.png) no-repeat center;
   background-size: contain;
 }
 header:hover #head-top .Toolbar .icon.store {
-  background: url(../img/store-navy.png) no-repeat center;
+  background: url(../img/store-darkred.png) no-repeat center;
   background-size: contain;
 }
 header:hover #head-top .Toolbar .icon.login {
-  background: url(../img/login-navy.png) no-repeat center;
+  background: url(../img/login-darkred.png) no-repeat center;
   background-size: contain;
 }
 header:hover #head-top .Toolbar .icon.cart {
-  background: url(../img/cart-navy.png) no-repeat center;
+  background: url(../img/cart-darkred.png) no-repeat center;
   background-size: contain;
 }
 header:hover #head-top .Toolbar .icon.arrow:hover {
-  background: url(../img/down-skyblue.png) no-repeat center;
+  background: url(../img/down-red.png) no-repeat center;
   background-size: contain;
 }
 header:hover #head-top .Toolbar .icon.search:hover {
-  background: url(../img/search-skyblue.png) no-repeat center;
+  background: url(../img/search-red.png) no-repeat center;
   background-size: contain;
 }
 header:hover #head-top .Toolbar .icon.store:hover {
-  background: url(../img/store-skyblue.png) no-repeat center;
+  background: url(../img/store-red.png) no-repeat center;
   background-size: contain;
 }
 header:hover #head-top .Toolbar .icon.login:hover {
-  background: url(../img/login-skyblue.png) no-repeat center;
+  background: url(../img/login-red.png) no-repeat center;
   background-size: contain;
 }
 header:hover #head-top .Toolbar .icon.cart:hover {
-  background: url(../img/cart-skyblue.png) no-repeat center;
+  background: url(../img/cart-red.png) no-repeat center;
   background-size: contain;
 }
 header:hover #head-bottom li:hover {
-  color: #222222;
+  color: #9e0000;
 }
 
 header.scrolled {
-  color: #012d50;
+  color: #500101;
 }
 header.scrolled::before {
   height: 100%;
 }
-header.scrolled #head-top h1 {
-  background: url("../img/vetus-black.png") no-repeat center center;
-  background-size: 54%;
-}
 header.scrolled #head-top .Toolbar .icon.arrow {
-  background: url(../img/down-navy.png) no-repeat center;
+  background: url(../img/down-darkred.png) no-repeat center;
   background-size: contain;
 }
 header.scrolled #head-top .Toolbar .icon.search {
-  background: url(../img/search-navy.png) no-repeat center;
+  background: url(../img/search-darkred.png) no-repeat center;
   background-size: contain;
 }
 header.scrolled #head-top .Toolbar .icon.store {
-  background: url(../img/store-navy.png) no-repeat center;
+  background: url(../img/store-darkred.png) no-repeat center;
   background-size: contain;
 }
 header.scrolled #head-top .Toolbar .icon.login {
-  background: url(../img/login-navy.png) no-repeat center;
+  background: url(../img/login-darkred.png) no-repeat center;
   background-size: contain;
 }
 header.scrolled #head-top .Toolbar .icon.cart {
-  background: url(../img/cart-navy.png) no-repeat center;
+  background: url(../img/cart-darkred.png) no-repeat center;
   background-size: contain;
 }
 
@@ -586,7 +587,7 @@ header.scrolled #head-top .Toolbar .icon.cart {
   width: 100%;
   height: fit-content;
   margin-bottom: 10px;
-  color: #3d9ce3;
+  color: #9e0000;
   font-size: 14px;
   font-weight: 700;
 }
@@ -698,7 +699,7 @@ header.scrolled #head-top .Toolbar .icon.cart {
 #large-view .box.active ul {
   width: 100%;
   height: fit-content;
-  padding-left: 20px;
+  padding-left: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -765,7 +766,7 @@ footer #footer-top .inner .dep-a li {
   font-weight: 700;
 }
 footer #footer-top .inner .dep-a li:hover {
-  color: #3d9ce3;
+  color: #9e0000;
 }
 footer #footer-top .inner .dep-b {
   width: 18.75%;
@@ -780,7 +781,7 @@ footer #footer-top .inner .dep-b li {
   font-weight: 500;
 }
 footer #footer-top .inner .dep-b li:hover {
-  color: #3d9ce3;
+  color: #9e0000;
 }
 footer #footer-top .inner .info {
   width: 37.5%;
@@ -803,7 +804,7 @@ footer #footer-top .inner .info li {
   font-weight: 500;
 }
 footer #footer-top .inner .info li:hover {
-  color: #3d9ce3;
+  color: #9e0000;
 }
 footer #footer-top .inner .letter {
   width: 25%;
@@ -864,8 +865,8 @@ footer #footer-bottom #copy .btns {
   border-bottom: 1px solid #d2d2d2;
 }
 footer #footer-bottom #copy .btns:hover {
-  color: #3d9ce3;
-  border-color: #3d9ce3;
+  color: #9e0000;
+  border-color: #9e0000;
 }
 footer #footer-bottom #copy .join p {
   float: left;
@@ -890,8 +891,8 @@ footer #footer-bottom #copy .join li {
   font-weight: 700;
 }
 footer #footer-bottom #copy .join li:hover {
-  color: #3d9ce3;
-  border-color: #3d9ce3;
+  color: #9e0000;
+  border-color: #9e0000;
 }
 footer #footer-bottom #license {
   margin: 12px 0;
