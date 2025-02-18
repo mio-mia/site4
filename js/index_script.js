@@ -5,7 +5,15 @@ const head_scroll = new EzenScrollClass("#main-view-b",{
   class : 'scrolled',
   baseline : 'top',
   add: 0.5,
-}); 
+});
+
+// 햄버거 메뉴 클릭 시 .active 클래스 토글
+document.getElementById('ham').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.querySelector('header').classList.toggle('active');
+  document.getElementById('head-bottom').classList.toggle('active');
+  document.querySelector('#head-top .Toolbar.left').classList.toggle('active');
+});
 
 
 /* main swiper */

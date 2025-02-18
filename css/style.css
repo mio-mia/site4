@@ -52,6 +52,18 @@ header::before {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 }
+header::after {
+  content: "";
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
 header #head-top {
   width: 100%;
   height: 60px;
@@ -64,8 +76,8 @@ header #head-top {
 header #head-top h1 {
   width: 20%;
   height: 50px;
-  margin-top: 12px;
   position: relative;
+  left: -82.5%;
   z-index: 1;
 }
 header #head-top h1 p {
@@ -77,16 +89,18 @@ header #head-top h1 p {
   font-size: 2.4em;
   font-family: "LonginesSerif_B", "Georgia";
 }
-header #head-top .Toolbar {
+header #head-top .Toolbar.left {
   width: 100%;
   height: 40px;
   padding-top: 10px;
   display: flex;
-}
-header #head-top .Toolbar.left {
   justify-content: flex-start;
 }
 header #head-top .Toolbar.right {
+  width: 100%;
+  height: 40px;
+  padding-top: 10px;
+  display: flex;
   justify-content: flex-end;
 }
 header #head-top .Toolbar ul {
@@ -131,6 +145,41 @@ header #head-top .Toolbar .icon.login {
 header #head-top .Toolbar .icon.cart {
   background: url(../img/cart-white.png) no-repeat center;
   background-size: contain;
+}
+header #head-top .Toolbar #ham div {
+  display: none;
+  width: 1.6em;
+  height: 1.6em;
+  margin: 0 8px;
+  position: relative;
+  z-index: 2;
+}
+header #head-top .Toolbar #ham div i {
+  position: absolute;
+  width: 86%;
+  height: 2px;
+  background: #500101;
+  transition: all 0.4s ease-in-out;
+}
+header #head-top .Toolbar #ham div i:nth-child(1) {
+  top: 15%;
+}
+header #head-top .Toolbar #ham div i:nth-child(2) {
+  top: 50%;
+}
+header #head-top .Toolbar #ham div i:nth-child(3) {
+  top: 85%;
+}
+header #head-top .Toolbar #ham.active i:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+header #head-top .Toolbar #ham.active i:nth-child(2) {
+  display: none;
+}
+header #head-top .Toolbar #ham.active i:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
 }
 header #head-bottom {
   width: 22%;
@@ -632,7 +681,7 @@ header.scrolled #head-top .Toolbar .icon.cart {
 #large-view {
   width: 100%;
   height: fit-content;
-  margin: 50px 0;
+  padding: 50px 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -731,6 +780,26 @@ header.scrolled #head-top .Toolbar .icon.cart {
   align-items: center;
 }
 
+#video {
+  width: 100%;
+  height: fit-content;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#video .frame {
+  width: 100%;
+  height: 540px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#video iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* footer */
 footer {
   width: 100%;
   height: fit-content;
@@ -897,6 +966,79 @@ footer #footer-bottom #license {
   color: #666666;
 }
 
-/*
-
-*/
+/* media query */
+@media all and (max-width: 1024px) {
+  header {
+    background: #f4f4f4;
+  }
+  header::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: 0;
+    z-index: 1;
+    width: 0%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -2px 0 3px rgba(0, 0, 0, 0.2);
+  }
+  header.active::before {
+    width: 40%;
+  }
+  header.active::after {
+    content: "";
+    visibility: visible;
+    opacity: 1;
+  }
+  header #head-top {
+    height: 70px;
+  }
+  header #head-top h1 {
+    color: #500101;
+    margin-top: -12px;
+    left: 2%;
+  }
+  header #head-top .Toolbar.left {
+    display: none;
+    width: 0;
+    height: 0;
+    padding: 0;
+  }
+  header #head-top .Toolbar.right {
+    justify-content: space-between;
+  }
+  header #head-top .Toolbar.right .txt {
+    display: none;
+  }
+  header #head-top .Toolbar li .icon {
+    width: 1.6em;
+    height: 1.6em;
+  }
+  header #head-top .Toolbar .icon.search {
+    background: url(../img/search-darkred.png) no-repeat center;
+    background-size: contain;
+  }
+  header #head-top .Toolbar .icon.store {
+    background: url(../img/store-darkred.png) no-repeat center;
+    background-size: contain;
+  }
+  header #head-top .Toolbar .icon.login {
+    background: url(../img/login-darkred.png) no-repeat center;
+    background-size: contain;
+  }
+  header #head-top .Toolbar .icon.cart {
+    background: url(../img/cart-darkred.png) no-repeat center;
+    background-size: contain;
+  }
+  header #head-top .Toolbar #ham div {
+    display: block;
+  }
+  header #head-top .Toolbar #ham.active div {
+    top: 0;
+    right: -150%;
+  }
+  header #head-bottom {
+    display: none;
+  }
+}
