@@ -19,16 +19,16 @@ const main_swiper = new Swiper("#inner-box",{
     enabled:true,
     releaseOnEdges: true,
   },
-  //effect: "creative",
-  //creativeEffect: {
-  //  prev: {
-  //    shadow: true,
-  //    translate: [0, 0, -400],
-  //  },
-  //  next: {
-  //    translate: [0, "100%", 0],
-  //  },
-  //},
+  effect: "creative",
+  creativeEffect: {
+   prev: {
+     shadow: true,
+     translate: [0, "0%", -400],
+   },
+   next: {
+     translate: [0, "100%", 100],
+   },
+  },
   
   pagination: {
     el: ".pager",
@@ -73,6 +73,30 @@ btns.forEach(function(btn){
     this.classList.add("active");
     removeActive(this, targets);
   });
+});
+
+/* select 스와이퍼 */
+var selectSlider = new Swiper("#select-sub article",{
+  wrapperClass: "item-wrap",
+  slideClass: "item",
+  slidesPerView: 1,   // 최소형태
+  spaceBetween: 10,   // 최소형태
+  breakpoints:{
+    // 화면의 너비가 1024px 이상 적용
+    430:{slidesPerView: 2, spaceBetween: 20},
+    // 화면의 너비가 1024px 이상 적용
+    1024:{slidesPerView: 3, spaceBetween: 30},
+    // 화면의 너비가 1440px 이상 적용
+    1440:{slidesPerView: 4, spaceBetween: 120},
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    hide: false,
+  },
+  navigation: {
+    nextEl: ".next",
+    prevEl: ".prev",
+  },
 });
 
 

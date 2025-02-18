@@ -360,6 +360,7 @@ header.scrolled #head-top .Toolbar .icon.cart {
 .wrap #main-view-b {
   background: url("../img/main_02.png") no-repeat center/cover;
   position: relative;
+  z-index: 3 !important;
 }
 .wrap #main-view-b:active {
   transition: all 0.5s;
@@ -530,18 +531,59 @@ header.scrolled #head-top .Toolbar .icon.cart {
 #select #select-sub {
   width: 100%;
   height: fit-content;
+  overflow: hidden;
 }
 #select #select-sub article {
   display: none;
+  position: relative;
 }
 #select #select-sub article.active {
   display: block;
+  height: 540px;
 }
-#select #select-sub ul {
+#select #select-sub article .swiper-scrollbar {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  z-index: 10;
+  width: 94%;
+  height: 3px;
+  background: #e4e4e4;
+}
+#select #select-sub article .swiper-scrollbar-drag {
+  height: 3px;
+  background: #222222;
+}
+#select #select-sub article .next {
+  background: url("../img/arrow-right.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+}
+#select #select-sub article .prev {
+  background: url("../img/arrow-left.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+}
+#select #select-sub article .next.arrow-hidden,
+#select #select-sub article .prev.arrow-hidden {
+  display: none;
+  background: transparent;
+}
+#select #select-sub .item-wrap {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
 }
 #select #select-sub .box {
   width: 25%;
@@ -559,8 +601,8 @@ header.scrolled #head-top .Toolbar .icon.cart {
   align-items: center;
 }
 #select #select-sub .box .img {
-  width: 280px;
-  height: 280px;
+  width: 330px;
+  height: 330px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -618,16 +660,6 @@ header.scrolled #head-top .Toolbar .icon.cart {
   font-size: 14px;
 }
 
-@keyframes open-no-01 {
-  0% {
-    width: 0;
-    height: auto;
-  }
-  100% {
-    width: 100%;
-    height: auto;
-  }
-}
 #large-view {
   width: 100%;
   height: fit-content;
@@ -642,25 +674,17 @@ header.scrolled #head-top .Toolbar .icon.cart {
   height: 480px;
   border-radius: 20px;
   overflow: hidden;
-}
-#large-view .box.no-01 {
-  background: url("../img/gift-01.png") no-repeat center;
-  background-size: 385%;
-  background-position: 53%;
-}
-#large-view .box.no-02 {
-  background: url("../img/gift-03.png") no-repeat center;
-  background-size: 284%;
-  background-position: 57%, 10%;
-}
-#large-view .box.no-03 {
-  background: url("../img/gift-04.png") no-repeat center;
-  background-size: 300%;
-  background-position: 54%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s;
+  background: #fff;
 }
 #large-view .box .large-img {
-  display: none;
-  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -672,19 +696,8 @@ header.scrolled #head-top .Toolbar .icon.cart {
   right: 0;
   width: 20%;
   height: 100%;
+  display: none;
   background: linear-gradient(270deg, #fff 30%, rgba(0, 0, 0, 0));
-}
-#large-view .box.no-01 .large-img img {
-  animation: open 0s;
-  transform: translate(-14%, -15%);
-}
-#large-view .box.no-02 .large-img img {
-  animation: open 0s;
-  transform: translate(-12%, -20%) scale(0.9);
-}
-#large-view .box.no-03 .large-img img {
-  animation: open 0s;
-  transform: translate(-14%, -19%) scale(0.8);
 }
 #large-view .box .info {
   width: 35%;
@@ -732,14 +745,12 @@ header.scrolled #head-top .Toolbar .icon.cart {
 #large-view .box.active {
   width: 74%;
   height: 480px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  transition: all 0.4s;
 }
 #large-view .box.active .preview img {
   display: none;
+}
+#large-view .box.active .large-img::after {
+  display: block;
 }
 #large-view .box.active .large-img {
   display: block;
