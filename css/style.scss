@@ -179,7 +179,8 @@ header.scrolled{
     &:active{transition: all 0.5s; transition-duration: 1400ms;}
     .text{width: fit-content; height: fit-content;
       position: absolute; bottom: calc(50% - 160px); left: 7.6%; color: #fff;}
-    .text h5{font-size: 14px; font-weight: 700; margin-bottom: 20px;}
+    .text h5{font-size: 14px; font-weight: 700; font-family: $Hahmlet-Regular;
+      margin-bottom: 20px;}
     .text h3{font-size: 60px; font-family: $eng-point; margin-bottom: 30px; line-height: 1.2;}
     .text p{font-size: 14px; line-height: 1.6;
       font-family: $Hahmlet-Regular; margin-bottom: 30px;}
