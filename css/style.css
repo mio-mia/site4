@@ -311,8 +311,9 @@ header.scrolled #head-top .Toolbar .icon.cart {
 }
 .wrap #main-view-a .text p {
   font-size: 14px;
-  margin-bottom: 30px;
+  line-height: 1.6;
   font-family: "Hahmlet-Regular";
+  margin-bottom: 30px;
 }
 .wrap #main-view-a .text .btns {
   display: flex;
@@ -370,8 +371,9 @@ header.scrolled #head-top .Toolbar .icon.cart {
 }
 .wrap #main-view-b .text p {
   font-size: 14px;
-  margin-bottom: 30px;
+  line-height: 1.6;
   font-family: "Hahmlet-Regular";
+  margin-bottom: 30px;
 }
 .wrap #main-view-b .text span {
   display: flex;
@@ -532,6 +534,8 @@ header.scrolled #head-top .Toolbar .icon.cart {
   padding: 5px 0;
   font-size: 12px;
   font-weight: 700;
+  font-family: "AritaDotum-Medium";
+  letter-spacing: 0.4px;
   border-bottom: 1px solid #f4f4f4;
 }
 #select .list a.active {
@@ -598,9 +602,6 @@ header.scrolled #head-top .Toolbar .icon.cart {
   width: 25%;
   height: 510px;
 }
-#select #select-sub .box:hover .img img {
-  transform: scale(1.1);
-}
 #select #select-sub .box a {
   width: 100%;
   height: 100%;
@@ -623,6 +624,9 @@ header.scrolled #head-top .Toolbar .icon.cart {
 }
 #select #select-sub img.fix {
   margin-left: 22px;
+}
+#select #select-sub .box:hover .img img {
+  transform: scale(1.1);
 }
 #select #select-sub .box .info {
   width: 60%;
@@ -658,7 +662,8 @@ header.scrolled #head-top .Toolbar .icon.cart {
 #select #select-sub .box .info .sub p {
   display: block;
   color: #666666;
-  font-size: 14px;
+  font-size: 12.5px;
+  font-family: "AritaDotum-Medium";
   line-height: 1.2;
 }
 #select #select-sub .box .info h4 {
@@ -755,15 +760,14 @@ header.scrolled #head-top .Toolbar .icon.cart {
   width: 74%;
   height: 480px;
 }
-#large-view .box.active .preview img {
-  display: none;
-}
 #large-view .box.active .large-img::after {
   display: block;
 }
 #large-view .box.active .large-img {
-  display: block;
   width: 65%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 #large-view .box.active .info {
   display: flex;
@@ -1064,8 +1068,24 @@ footer #footer-bottom #license {
   header #head-bottom .ko a {
     font-family: "AritaDotum-SemiBold";
   }
+  header:hover::before {
+    height: 0;
+  }
   main .wrap #main-view-b .text {
     bottom: 12%;
     left: 7.6%;
+  }
+  #select #select-sub article .swiper-scrollbar {
+    width: 90%;
+  }
+  #select #select-sub article .prev {
+    right: 3.6%;
+  }
+  #select #select-sub .box .img {
+    width: 260px;
+    height: 260px;
+  }
+  #large-view h3 {
+    font-size: 30px !important;
   }
 }
