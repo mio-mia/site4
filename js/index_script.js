@@ -138,6 +138,7 @@ function handleLargeScreenClick() {
   });
 }
 
+
 mediaQueryList.addEventListener('change', (event) => {
   if (event.matches) {
     // 1025px 이하일 때
