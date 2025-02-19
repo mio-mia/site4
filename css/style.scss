@@ -24,6 +24,34 @@ $eng-point: "LonginesSerif_B", "Georgia";
 $content-M: 'LonginesSans_M', Helvetica, Arial;
 $content-B: 'LonginesSans_B', Helvetica, Arial;
 
+$AritaBuri-Bold: 'AritaBuri-Bold';
+$AritaBuri-Hairline: 'AritaBuri-Hairline';
+$AritaBuri-Light: 'AritaBuri-Light';
+$AritaBuri-Medium: 'AritaBuri-Medium';
+$AritaBuri-SemiBold: 'AritaBuri-SemiBold';
+
+$AritaDotum-Bold: 'AritaDotum-Bold';
+$AritaDotum-Thin: 'AritaDotum-Thin';
+$AritaDotum-Light: 'AritaDotum-Light';
+$AritaDotum-Medium: 'AritaDotum-Medium';
+$AritaDotum-SemiBold: 'AritaDotum-SemiBold';
+
+$Hahmlet-Black: 'Hahmlet-Black';
+$Hahmlet-Bold: 'Hahmlet-Bold';
+$Hahmlet-ExtraBold: 'Hahmlet-ExtraBold';
+$Hahmlet-ExtraLight: 'Hahmlet-ExtraLight';
+$Hahmlet-Light: 'Hahmlet-Light';
+$Hahmlet-Medium: 'Hahmlet-Medium';
+$Hahmlet-Regular: 'Hahmlet-Regular';
+$Hahmlet-SemiBold: 'Hahmlet-SemiBold';
+$Hahmlet-Thin: 'Hahmlet-Thin';
+
+$NanumHumanBold: 'NanumHumanBold';
+$NanumHumanEB: 'NanumHumanEB';
+$NanumHumanEL: 'NanumHumanEL';
+$NanumHumanHeavy: 'NanumHumanHeavy';
+$NanumHumanLight: 'NanumHumanLight';
+$NanumHumanRegular: 'NanumHumanRegular';
 
 
 /* header */
@@ -42,7 +70,7 @@ header{
   #head-top{width: 100%; height: 60px; padding: 0 7%;
     display: flex; justify-content: space-between; align-items: center;
     flex-direction: row;
-    h1{width: 20%; height: 50px; position: relative; left: -82.5%; z-index: 1;}
+    h1{width: 20%; height: 50px; position: relative; z-index: 1;}
     h1 p{width: 100%; height: 100%;
       display: flex; justify-content: center; align-items: center;
       font-size: 2.4em; font-family: $eng-point;}
@@ -54,7 +82,7 @@ header{
       ul{display: flex; justify-content: center;}
       li{width: fit-content; height: 100%; font-size: 12px; line-height: 1.6;}
       li a{font-family: $content-M;}
-      .text{margin-right: 12px;}
+      .text{margin-right: 12px; font-family: $AritaDotum-SemiBold; letter-spacing: 0.3px;}
       li .icon{display: inline-block; width: 1.2em; height: 1.2em; margin: 0 8px; vertical-align: middle;}
       .icon.arrow{background: url(../img/down-white.png) no-repeat center; background-size: contain;}
       .icon.search{background: url(../img/search-white.png) no-repeat center; background-size: contain;}
@@ -77,7 +105,7 @@ header{
     }
   }// #head-top
   #head-bottom{
-    width: 22%; height: fit-content; margin: 6px auto 0;
+    width: 22%; height: 54px; margin: 6px auto 0;
     ul{width: 100%; height: 54px;
       display: flex; justify-content: space-between;}
     li{width: fit-content; height: 100%;}
@@ -134,7 +162,7 @@ header.scrolled{
     .text{width: fit-content; height: fit-content;
       position: absolute; bottom: 12%; left: 7.6%; color: #fff;}
     .text h3{font-size: 60px; font-family: $eng-point; margin-bottom: 30px; line-height: 1.2;}
-    .text p{font-size: 14px; margin-bottom: 30px;}
+    .text p{font-size: 14px; margin-bottom: 30px; font-family: $Hahmlet-Regular;}
     .text .btns{display: flex; justify-content: flex-start; align-items: center;}
     .text span{display: flex; justify-content: center; align-items: center;
       width: fit-content; height: 50px;
@@ -152,7 +180,7 @@ header.scrolled{
       position: absolute; bottom: calc(50% - 160px); left: 7.6%; color: #fff;}
     .text h5{font-size: 14px; font-weight: 700; margin-bottom: 20px;}
     .text h3{font-size: 60px; font-family: $eng-point; margin-bottom: 30px; line-height: 1.2;}
-    .text p{font-size: 14px; margin-bottom: 30px;}
+    .text p{font-size: 14px; margin-bottom: 30px; font-family: $Hahmlet-Regular;}
     .text span{display: flex; justify-content: center; align-items: center;
       width: fit-content; height: 50px;
       padding: 2px 35px; margin-right: 15px; line-height: 14px;
@@ -212,7 +240,7 @@ header.scrolled{
 #select{
   width: 100%; height: fit-content;
   margin-top: 50px; padding: 50px 0;
-  .select-btn{width: 18%; height: fit-content; margin: 0 auto 100px;
+  #select-btn{width: 18%; height: fit-content; margin: 0 auto 100px;
     display: flex;  justify-content: space-between; align-items: center;}
   .list{width: fit-content; height: 100%;}
   .list a{width: fit-content; height: 100%; padding: 5px 0;
@@ -392,16 +420,11 @@ footer{
 
 /* media query */
 @media all and (max-width: 1024px){
-  header{background: $ultra-light-grey;
-    &::before{content: "";
-      position: fixed; top: 0; left: auto; right: 0; z-index: 1;
-      width: 0%; height: 100%;
-      border-radius: 20px 0 0 20px; box-shadow: -2px 0 3px #00000033;}
-    &.active::before{width: 40%;}
-    &.active::after{content: ""; visibility: visible; opacity: 1;}
+  header{background: $ultra-light-grey; box-shadow: 0 3px 3px #a8a8a822;
     #head-top{height: 70px;
       h1{color: $deep-red; margin-top: -12px; left: 2%;}
       .Toolbar{
+        color: $deep-red;
         &.left{display: none; width: 0; height: 0; padding: 0;}
         &.right{justify-content: space-between;}
         &.right .txt{display: none;}
@@ -414,14 +437,36 @@ footer{
         #ham.active div{top: 0; right: -150%;}
       } // .Toolbar
     } // #head-top
+
+    @keyframes head-bottom{
+      0%{right: -40%;}
+      100%{right: 0;}
+    }
+
     #head-bottom{display: none;
-      position: fixed; top: 0; left: auto; right: 0;
-      width: 0%; height: 100%; background: $ultra-light-grey;
+      position: fixed; top: -5px; left: auto; right: -40%;
+      width: 40%; height: 100%; padding: 50px 0;
+      background: $ultra-light-grey;
       border-radius: 20px 0 0 20px; box-shadow: -2px 0 3px #00000033;
-      &.active{display: block; width: 40%; }
+      transition: all 0.3s ease-in-out;
+      &.active{display: block; animation: head-bottom 0.3s ease-in-out 1 forwards;}
       &.active::before{display: block;}
+      ul{width: 80%; height: fit-content;
+        margin: 0 10%; padding: 10px 0;
+        justify-content: flex-start; align-items: start;
+        flex-direction: column;}
+      ul.ghost{border-top: 1px solid #00000033;}
+      li{line-height: 50px; font-size: 12px; 
+        color: $deep-red; font-family: $content-B; cursor: pointer;}
+      .ko a{font-family: $AritaDotum-SemiBold;}
     } // #head-bottom
   } // header
-  // main{}
+
+  main{
+    .wrap{
+      #main-view-b .text{bottom: 12%; left: 7.6%;}
+    } // .wrap
+  } // main
+
   // footer{}
 }

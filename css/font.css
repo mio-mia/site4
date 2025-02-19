@@ -13,3 +13,142 @@
   font-family: 'LonginesSerif_B';
   src: url(../font/LonginesSerifBold.woff2) format('woff2');
 }
+
+
+
+/* test용 font */
+
+/* AritaBuri */
+@font-face {
+  font-family: 'AritaBuri-Bold';
+  src: url(../font/AritaBuriKR/AritaBuriKR-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AritaBuri-Hairline';
+  src: url(../font/AritaBuriKR/AritaBuriKR-Hairline.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AritaBuri-Light';
+  src: url(../font/AritaBuriKR/AritaBuriKR-Light.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AritaBuri-Medium';
+  src: url(../font/AritaBuriKR/AritaBuriKR-Medium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AritaBuri-SemiBold';
+  src: url(../font/AritaBuriKR/AritaBuriKR-SemiBold.woff2) format('woff2');
+}
+
+/* ---------------------------------------------------------- */
+
+/* AritaDotum */
+@font-face {
+  font-family: 'AritaDotum-Bold';
+  src: url(../font/AritaDotumKR/AritaDotumKR-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AritaDotum-Thin';
+  src: url(../font/AritaDotumKR/AritaDotumKR-Thin.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AritaDotum-Light';
+  src: url(../font/AritaDotumKR/AritaDotumKR-Light.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AritaDotum-Medium';
+  src: url(../font/AritaDotumKR/AritaDotumKR-Medium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AritaDotum-SemiBold';
+  src: url(../font/AritaDotumKR/AritaDotumKR-SemiBold.woff2) format('woff2');
+}
+
+/* ---------------------------------------------------------- */
+
+/* Hahmlet */
+@font-face {
+  font-family: 'Hahmlet-Black';
+  src: url(../font/Hahmlet/Hahmlet-Black.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Hahmlet-Bold';
+  src: url(../font/Hahmlet/Hahmlet-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Hahmlet-ExtraBold';
+  src: url(../font/Hahmlet/Hahmlet-ExtraBold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Hahmlet-ExtraLight';
+  src: url(../font/Hahmlet/Hahmlet-ExtraLight.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Hahmlet-Light';
+  src: url(../font/Hahmlet/Hahmlet-Light.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Hahmlet-Medium';
+  src: url(../font/Hahmlet/Hahmlet-Medium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Hahmlet-Regular';
+  src: url(../font/Hahmlet/Hahmlet-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Hahmlet-SemiBold';
+  src: url(../font/Hahmlet/Hahmlet-SemiBold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Hahmlet-Thin';
+  src: url(../font/Hahmlet/Hahmlet-Thin.woff2) format('woff2');
+}
+
+/* ---------------------------------------------------------- */
+
+/* NanumHuman */
+@font-face {
+  font-family: 'NanumHumanBold';
+  src: url(../font/NanumHuman/NanumHumanBold.woff) format('woff2');
+}
+
+@font-face {
+  font-family: 'NanumHumanEB';
+  src: url(../font/NanumHuman/NanumHumanEB.woff) format('woff2');
+}
+
+@font-face {
+  font-family: 'NanumHumanEL';
+  src: url(../font/NanumHuman/NanumHumanEL.woff) format('woff2');
+}
+
+@font-face {
+  font-family: 'NanumHumanHeavy';
+  src: url(../font/NanumHuman/NanumHumanHeavy.woff) format('woff2');
+}
+
+@font-face {
+  font-family: 'NanumHumanLight';
+  src: url(../font/NanumHuman/NanumHumanLight.woff) format('woff2');
+}
+
+@font-face {
+  font-family: 'NanumHumanRegular';
+  src: url(../font/NanumHuman/NanumHumanRegular.woff) format('woff2');
+}

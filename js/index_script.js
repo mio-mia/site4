@@ -7,12 +7,6 @@ const head_scroll = new EzenScrollClass("#main-view-b",{
   add: 0.5,
 });
 
-// 햄버거 메뉴 클릭 시 .active 클래스 토글
-document.getElementById('ham').addEventListener('click', function() {
-  this.classList.toggle('active');
-  document.getElementById('head-bottom').classList.toggle('active');
-  document.querySelector('#head-top .Toolbar.left').classList.toggle('active');
-});
 
 
 /* main swiper */
@@ -107,6 +101,7 @@ var selectSlider = new Swiper("#select-sub article",{
 });
 
 
+
 /* large-view click 효과 */
 var largeBoxes = document.querySelectorAll('#large-view .box');
 
@@ -118,3 +113,69 @@ largeBoxes.forEach(function (box) {
     box.classList.add('active');
   });
 });
+
+
+
+
+// 미디어 사이즈에 따른 값 설정
+const mediaQueryList = window.matchMedia('(max-width: 1025px)');
+const ham = document.getElementById('ham');
+const ghost = document.querySelectorAll('.ghost');
+const over = document.getElementById('over');
+const under = document.getElementById('under');
+
+function handleSmallScreenClick(event) {
+  if (event.target.closest('#ham')) {
+    ham.classList.toggle('active');
+    document.getElementById('head-bottom').classList.toggle('active');
+  }
+}
+
+function handleLargeScreenClick() {
+  // .ghost에 .hidden 클래스 추가
+  ghost.forEach(element => {
+    element.classList.add('hidden');
+  });
+}
+
+mediaQueryList.addEventListener('change', (event) => {
+  if (event.matches) {
+    // 1025px 이하일 때
+    ham.addEventListener('click', handleSmallScreenClick);
+    // .hidden 클래스 제거
+    document.querySelectorAll('#head-bottom .hidden').forEach(element => {
+      element.classList.remove('hidden');
+    });
+    // #over에 .hidden 클래스 추가
+    over.classList.add('hidden');
+    // #under에서 .hidden 클래스 제거
+    under.classList.remove('hidden');
+  } else {
+    // 1025px 이상일 때
+    ham.removeEventListener('click', handleSmallScreenClick);
+    handleLargeScreenClick();
+    // #over에서 .hidden 클래스 제거
+    over.classList.remove('hidden');
+    // #under에 .hidden 클래스 추가
+    under.classList.add('hidden');
+  }
+});
+
+// 초기 로드 시 이벤트 리스너 설정
+if (mediaQueryList.matches) {
+  ham.addEventListener('click', handleSmallScreenClick);
+  // .hidden 클래스 제거
+  document.querySelectorAll('#head-bottom .hidden').forEach(element => {
+    element.classList.remove('hidden');
+  });
+  // #over에 .hidden 클래스 추가
+  over.classList.add('hidden');
+  // #under에서 .hidden 클래스 제거
+  under.classList.remove('hidden');
+} else {
+  handleLargeScreenClick();
+  // #over에서 .hidden 클래스 제거
+  over.classList.remove('hidden');
+  // #under에 .hidden 클래스 추가
+  under.classList.add('hidden');
+}
