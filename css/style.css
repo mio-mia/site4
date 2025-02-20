@@ -1230,7 +1230,7 @@ footer #footer-bottom #license {
     border-radius: 0px;
   }
   main #main-view-a .text {
-    bottom: 10% !important;
+    bottom: 12% !important;
     left: 0 !important;
     width: 100% !important;
     display: flex;
@@ -1250,7 +1250,7 @@ footer #footer-bottom #license {
     padding: 2px 30px !important;
   }
   main #main-view-b .text {
-    bottom: 10% !important;
+    bottom: 12% !important;
     left: 0 !important;
     width: 100% !important;
     display: flex;
@@ -1273,6 +1273,9 @@ footer #footer-bottom #license {
     height: 40px !important;
     padding: 2px 30px !important;
   }
+  main .pager {
+    bottom: 5% !important;
+  }
   main .pager::after {
     content: "/";
     position: absolute;
@@ -1292,7 +1295,7 @@ footer #footer-bottom #license {
     animation: none !important;
   }
   main .mouse {
-    height: 40px !important;
+    height: 70px !important;
   }
   main .mouse p {
     font-size: 9px !important;
@@ -1363,6 +1366,9 @@ footer #footer-bottom #license {
   }
   footer #footer-top .dep-a {
     width: 30% !important;
+  }
+  footer #footer-top .dep-a li {
+    font-family: "AritaDotum-SemiBold" !important;
   }
   footer #footer-top .dep-b {
     width: 25% !important;
