@@ -1295,10 +1295,19 @@ footer #footer-bottom #license {
     animation: none !important;
   }
   main .mouse {
-    height: 70px !important;
+    height: 65px !important;
   }
   main .mouse p {
     font-size: 9px !important;
+  }
+  main .mouse i {
+    height: 45px !important;
+  }
+  main .mouse i::after {
+    height: 45px !important;
+  }
+  main #select #select-btn {
+    width: 26%;
   }
   main #select #select-sub .box {
     margin-left: 20px;
@@ -1381,5 +1390,34 @@ footer #footer-bottom #license {
     width: 45% !important;
     height: fit-content !important;
     padding-left: 0 !important;
+  }
+}
+@media all and (max-width: 431px) {
+  header #head-top h1 p {
+    font-size: 2em !important;
+    margin-top: -2px;
+  }
+  header #head-top .Toolbar #ham.active div {
+    top: 0;
+    right: -50%;
+  }
+  main .wrap #main-view-a .text h3 {
+    font-size: 36px !important;
+  }
+  main .wrap #main-view-b .text h3 {
+    font-size: 30px !important;
+  }
+  main #select #select-btn {
+    width: 40% !important;
+    margin-bottom: 60px !important;
+  }
+  main #select-sub article .swiper-scrollbar {
+    width: 80% !important;
+  }
+  main #select-sub article .prev {
+    right: 8% !important;
+  }
+  main #select-sub .box {
+    margin: 0 55px !important;
   }
 }

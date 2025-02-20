@@ -606,11 +606,14 @@ footer{
       span.active::before{animation: none !important;}
     } // .pager
 
-    .mouse{height: 70px !important;
+    .mouse{height: 65px !important;
       p{font-size: 9px !important;}
+      i{height: 45px !important;}
+      i::after{height: 45px !important;}
     } // .mouse
 
     #select{
+      #select-btn{width: 26%;}
       #select-sub .box{margin-left: 20px;}
     } // #select
 
@@ -653,5 +656,28 @@ footer{
       width: 45% !important; height: fit-content !important;
       padding-left: 0 !important;
     }
-  }
+  } // footer
+} // 768px
+
+
+@media all and (max-width : 431px){
+  header{
+    #head-top{
+      h1 p{font-size: 2em !important; margin-top: -2px;}
+      .Toolbar #ham.active div{top: 0; right: -50%;}
+    } // head-top
+  } // header
+
+  main{
+    .wrap #main-view-a .text h3{font-size: 36px !important;}
+    .wrap #main-view-b .text h3{font-size: 30px !important;}
+    #select #select-btn{width: 40% !important; margin-bottom: 60px !important;}
+    #select-sub article .swiper-scrollbar{width: 80% !important;}
+    #select-sub article .prev{right: 8% !important;}
+    #select-sub .box{margin: 0 55px !important;}
+  } // main
+
+  footer{
+
+  } // footer
 }
