@@ -821,6 +821,27 @@ footer #footer-top .inner {
   flex-direction: row;
   color: #252525;
 }
+footer #footer-top .inner .title {
+  display: none;
+}
+footer #footer-top .inner .title h3 {
+  line-height: 48px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "AritaDotum-SemiBold";
+}
+footer #footer-top .inner .title i {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #500101;
+  border-radius: 50%;
+  background: url(../img/down-darkred.png) no-repeat center;
+  background-size: contain;
+}
+footer #footer-top .inner div.active .title i {
+  background: url(../img/up-darkred.png) no-repeat center;
+  background-size: contain;
+}
 footer #footer-top .inner .dep-a {
   width: 18.75%;
   height: 190px;
@@ -1250,7 +1271,7 @@ footer #footer-bottom #license {
     padding: 2px 30px !important;
   }
   main #main-view-b .text {
-    bottom: 12% !important;
+    bottom: 14% !important;
     left: 0 !important;
     width: 100% !important;
     display: flex;
@@ -1419,5 +1440,165 @@ footer #footer-bottom #license {
   }
   main #select-sub .box {
     margin: 0 55px !important;
+  }
+  main #large-view .box {
+    flex-direction: column;
+    height: 240px !important;
+  }
+  main #large-view .box .large-img {
+    width: 100% !important;
+    height: 70% !important;
+  }
+  main #large-view .box .large-img::after {
+    top: auto;
+    bottom: 0%;
+    right: 0;
+    width: 100% !important;
+    height: 30% !important;
+    background: linear-gradient(0deg, #ffffff 30%, rgba(0, 0, 0, 0)) !important;
+  }
+  main #large-view .box .large-img img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  main #large-view .box .info {
+    width: 100% !important;
+    height: 30% !important;
+  }
+  main #large-view .box ul {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  main #large-view .box li.name {
+    width: 70% !important;
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main #large-view .box li.more {
+    width: 30% !important;
+    height: 100% !important;
+  }
+  main #large-view .box h5 {
+    display: none;
+  }
+  main #large-view .box h3 {
+    width: 80%;
+    height: 100% !important;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 22px !important;
+  }
+  main #large-view .box:nth-child(2) .large-img {
+    order: 1;
+  }
+  main #large-view .box:nth-child(2) .large-img::after {
+    right: 0 !important;
+  }
+  main #large-view .box:nth-child(2) .large-img img {
+    margin-left: 0 !important;
+  }
+  main #large-view .box:nth-child(2) .info {
+    order: 2;
+  }
+  main #large-view .box:nth-child(2) ul {
+    margin-left: 0 !important;
+  }
+  footer #footer-top .inner {
+    width: 100% !important;
+    height: fit-content;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  footer #footer-top .inner .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer #footer-top .inner .dep-a {
+    width: 100% !important;
+    height: 48px;
+  }
+  footer #footer-top .inner .dep-a ul {
+    width: 100% !important;
+    height: 0;
+    margin-top: 20px;
+    transition: all 0.4s ease-in-out;
+  }
+  footer #footer-top .inner .dep-a li {
+    display: none;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    font-family: "AritaDotum-Medium" !important;
+  }
+  footer #footer-top .inner .dep-a.active {
+    height: fit-content !important;
+  }
+  footer #footer-top .inner .dep-a.active ul {
+    height: 160px !important;
+  }
+  footer #footer-top .inner .dep-a.active li {
+    display: block !important;
+  }
+  footer #footer-top .inner .dep-b {
+    width: 100% !important;
+    height: 48px;
+  }
+  footer #footer-top .inner .dep-b ul {
+    width: 100% !important;
+    height: 0;
+    margin-top: 20px;
+    transition: all 0.4s ease-in-out;
+  }
+  footer #footer-top .inner .dep-b li {
+    display: none;
+    font-size: 12px !important;
+  }
+  footer #footer-top .inner .dep-b.active {
+    height: fit-content !important;
+  }
+  footer #footer-top .inner .dep-b.active ul {
+    height: 140px !important;
+  }
+  footer #footer-top .inner .dep-b.active li {
+    display: block !important;
+  }
+  footer #footer-top .inner .info {
+    width: 100% !important;
+    height: 48px !important;
+    align-items: normal;
+    flex-direction: column !important;
+    padding-left: 15px !important;
+  }
+  footer #footer-top .inner .info ul {
+    width: 100% !important;
+    height: 0 !important;
+    transition: all 0.4s ease-in-out;
+  }
+  footer #footer-top .inner .info .left {
+    margin-top: 20px;
+  }
+  footer #footer-top .inner .info .right {
+    margin-top: 0;
+  }
+  footer #footer-top .inner .info ul:nth-child(1) {
+    margin-top: 0;
+  }
+  footer #footer-top .inner .info li {
+    display: none;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    font-family: "AritaDotum-Medium" !important;
+  }
+  footer #footer-top .inner .info.active {
+    height: fit-content !important;
+  }
+  footer #footer-top .inner .info.active ul {
+    height: 128px !important;
+  }
+  footer #footer-top .inner .info.active li {
+    display: block !important;
   }
 }

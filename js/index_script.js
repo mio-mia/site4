@@ -224,3 +224,46 @@ if (mediaQueryList.matches) {
   // #select 옵션 되돌리기 추가
   handleLargeScreenSelect();
 }
+
+
+/* 431px 이하 footer 아코디언 메뉴 설정 */
+function handleFooterAccordion() {
+  var footerDivs = document.querySelectorAll("#footer-top .inner > div");
+
+  footerDivs.forEach(function(div) {
+    div.addEventListener("click", function() {
+      // 클릭한 요소에 .active가 이미 있는 경우 제거
+      if (div.classList.contains("active")) {
+        div.classList.remove("active");
+      } else {
+        // 다른 요소에 들어간 "active" 제거하기
+        footerDivs.forEach(function(re) {
+          re.classList.remove("active");
+        });
+        // 클릭한 요소에 .active 추가
+        div.classList.add("active");
+      }
+    });
+  });
+}
+
+// 미디어 쿼리 설정
+const footerMediaQueryList = window.matchMedia('(max-width: 431px)');
+
+// 미디어 쿼리 변경 시 이벤트 리스너 설정
+footerMediaQueryList.addEventListener('change', (event) => {
+  if (event.matches) {
+    handleFooterAccordion();
+  } else {
+    // 431px 이상일 때 active 클래스 제거
+    var footerDivs = document.querySelectorAll("#footer-top .inner > div");
+    footerDivs.forEach(function(div) {
+      div.classList.remove("active");
+    });
+  }
+});
+
+// 초기 로드 시 이벤트 리스너 설정
+if (footerMediaQueryList.matches) {
+  handleFooterAccordion();
+}
