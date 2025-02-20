@@ -84,9 +84,9 @@ var selectSlider = new Swiper("#select-sub article",{
   spaceBetween: 10,   // 최소형태
   breakpoints:{
     // 화면의 너비가 1024px 이상 적용
-    430:{slidesPerView: 2, spaceBetween: 20},
+    768:{slidesPerView: 2, spaceBetween: 60},
     // 화면의 너비가 1024px 이상 적용
-    1024:{slidesPerView: 3, spaceBetween: 30},
+    1024:{slidesPerView: 3, spaceBetween: 80},
     // 화면의 너비가 1440px 이상 적용
     1440:{slidesPerView: 4, spaceBetween: 120},
   },
@@ -117,13 +117,14 @@ largeBoxes.forEach(function (box) {
 
 
 
-// 미디어 사이즈에 따른 값 설정
+/* 미디어 사이즈에 따른 값 설정 */
 const mediaQueryList = window.matchMedia('(max-width: 1025px)');
 const ham = document.getElementById('ham');
 const ghost = document.querySelectorAll('.ghost');
 const over = document.getElementById('over');
 const under = document.getElementById('under');
 
+  // #ham 클릭 시 이벤트
 function handleSmallScreenClick(event) {
   if (event.target.closest('#ham')) {
     ham.classList.toggle('active');
@@ -131,19 +132,51 @@ function handleSmallScreenClick(event) {
   }
 }
 
-function handleLargeScreenClick() {
   // .ghost에 .hidden 클래스 추가
+function handleLargeScreenClick() {
   ghost.forEach(element => {
     element.classList.add('hidden');
   });
 }
 
+  // #select gift 부분 hidden, only 부분 active
+function handleSmallScreenSelect() {
+  /* 
+    1-1) #select-btn .gift a.active 에서 .active를 삭제 / .gift에 .hidden 추가
+    1-2) #select-btn .only a에 .active 추가
+    2-1) #select-sub #gift.active 에서 .active 삭제 / #gift에 .hidden 추가
+    2-2) #select-sub #only에 .active 추가
+   */ 
+  document.querySelector('#select-btn .gift a.active').classList.remove('active');
+  document.querySelector('#select-btn .gift').classList.add('hidden');
+  
+  document.querySelector('#select-btn .only a').classList.add('active');
 
+  document.querySelector('#select-sub #gift.active').classList.remove('active');
+  document.querySelector('#select-sub #gift').classList.add('hidden');
+
+  document.querySelector('#select-sub #only').classList.add('active');
+}
+  // #select reset
+function handleLargeScreenSelect() {
+  document.querySelector('#select-btn .gift').classList.remove('hidden');
+  document.querySelector('#select-btn .gift a').classList.add('active');
+  
+  document.querySelector('#select-btn .only a').classList.remove('active');
+  
+  document.querySelector('#select-sub #gift').classList.remove('hidden');
+  document.querySelector('#select-sub #gift a').classList.add('active');
+
+  document.querySelector('#select-sub #only a').classList.remove('active');
+}
+
+// 미디어 쿼리 변경 시 이벤트 리스너 설정
 mediaQueryList.addEventListener('change', (event) => {
   if (event.matches) {
     // 1025px 이하일 때
+    // #ham 작동 o
     ham.addEventListener('click', handleSmallScreenClick);
-    // .hidden 클래스 제거
+      // .hidden 클래스 제거
     document.querySelectorAll('#head-bottom .hidden').forEach(element => {
       element.classList.remove('hidden');
     });
@@ -151,14 +184,21 @@ mediaQueryList.addEventListener('change', (event) => {
     over.classList.add('hidden');
     // #under에서 .hidden 클래스 제거
     under.classList.remove('hidden');
+
+    // #select 동작 작동동
+    handleSmallScreenSelect();
+
   } else {
     // 1025px 이상일 때
+    // #ham 작동 x
     ham.removeEventListener('click', handleSmallScreenClick);
     handleLargeScreenClick();
     // #over에서 .hidden 클래스 제거
     over.classList.remove('hidden');
     // #under에 .hidden 클래스 추가
     under.classList.add('hidden');
+    // #select 옵션 되돌리기 추가
+    handleLargeScreenSelect();
   }
 });
 
@@ -173,10 +213,14 @@ if (mediaQueryList.matches) {
   over.classList.add('hidden');
   // #under에서 .hidden 클래스 제거
   under.classList.remove('hidden');
+  // #select 관련 동작 추가
+  handleSmallScreenSelect();
 } else {
   handleLargeScreenClick();
   // #over에서 .hidden 클래스 제거
   over.classList.remove('hidden');
   // #under에 .hidden 클래스 추가
   under.classList.add('hidden');
+  // #select 옵션 되돌리기 추가
+  handleLargeScreenSelect();
 }
