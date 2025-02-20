@@ -84,7 +84,7 @@ var selectSlider = new Swiper("#select-sub article",{
   spaceBetween: 10,   // 최소형태
   breakpoints:{
     // 화면의 너비가 1024px 이상 적용
-    768:{slidesPerView: 2, spaceBetween: 60},
+    768:{slidesPerView: 2, spaceBetween: 50},
     // 화면의 너비가 1024px 이상 적용
     1024:{slidesPerView: 3, spaceBetween: 80},
     // 화면의 너비가 1440px 이상 적용
