@@ -308,7 +308,7 @@ header.scrolled #head-top .Toolbar .icon.cart {
 .wrap #main-view-a .text h3 {
   font-size: 60px;
   font-family: "LonginesSerif_B", "Georgia";
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   line-height: 1.2;
 }
 .wrap #main-view-a .text p {
@@ -370,7 +370,7 @@ header.scrolled #head-top .Toolbar .icon.cart {
 .wrap #main-view-b .text h3 {
   font-size: 60px;
   font-family: "LonginesSerif_B", "Georgia";
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   line-height: 1.2;
 }
 .wrap #main-view-b .text p {
@@ -606,6 +606,7 @@ header.scrolled #head-top .Toolbar .icon.cart {
 #select #select-sub .box {
   width: 25%;
   height: 510px;
+  flex-shrink: 0;
 }
 #select #select-sub .box a {
   width: 100%;
@@ -843,7 +844,7 @@ footer #footer-top .inner div.active .title i {
   background-size: contain;
 }
 footer #footer-top .inner .dep-a {
-  width: 18.75%;
+  width: 25%;
   height: 190px;
   padding-left: 15px;
 }
@@ -859,7 +860,7 @@ footer #footer-top .inner .dep-a li:hover {
   color: #9e0000;
 }
 footer #footer-top .inner .dep-b {
-  width: 18.75%;
+  width: 25%;
   height: 190px;
   padding-left: 15px;
 }
@@ -874,7 +875,7 @@ footer #footer-top .inner .dep-b li:hover {
   color: #9e0000;
 }
 footer #footer-top .inner .info {
-  width: 37.5%;
+  width: 50%;
   height: 190px;
   padding-left: 15px;
 }
@@ -1271,7 +1272,7 @@ footer #footer-bottom #license {
     padding: 2px 30px !important;
   }
   main #main-view-b .text {
-    bottom: 14% !important;
+    bottom: 12% !important;
     left: 0 !important;
     width: 100% !important;
     display: flex;
@@ -1315,23 +1316,11 @@ footer #footer-bottom #license {
   main .pager span.active::before {
     animation: none !important;
   }
-  main .mouse {
-    height: 65px !important;
-  }
   main .mouse p {
     font-size: 9px !important;
   }
-  main .mouse i {
-    height: 45px !important;
-  }
-  main .mouse i::after {
-    height: 45px !important;
-  }
   main #select #select-btn {
     width: 26%;
-  }
-  main #select #select-sub .box {
-    margin-left: 20px;
   }
   main #large-view {
     justify-content: center;
@@ -1437,9 +1426,6 @@ footer #footer-bottom #license {
   }
   main #select-sub article .prev {
     right: 8% !important;
-  }
-  main #select-sub .box {
-    margin: 0 55px !important;
   }
   main #large-view .box {
     flex-direction: column;

@@ -63,7 +63,7 @@ btns.forEach(function(btn){
     e.preventDefault();
     var href = this.getAttribute("href");
     var targets = document.querySelectorAll(href);
-    if(href == "All"){
+    if(href == "All"){ 
       var targets = document.querySelectorAll("#select-sub article");
     }else{
       var targets = document.querySelectorAll(href);
@@ -81,9 +81,9 @@ var selectSlider = new Swiper("#select-sub article",{
   wrapperClass: "item-wrap",
   slideClass: "item",
   slidesPerView: 1,   // 최소형태
-  spaceBetween: 0,   // 최소형태
+  spaceBetween: 0,
   breakpoints:{
-    // 화면의 너비가 1024px 이상 적용
+    // 화면의 너비가 768px 이상 적용
     768:{slidesPerView: 2, spaceBetween: 50},
     // 화면의 너비가 1024px 이상 적용
     1024:{slidesPerView: 3, spaceBetween: 80},

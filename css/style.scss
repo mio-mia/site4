@@ -161,7 +161,7 @@ header.scrolled{
     &:active{transition: all 0.5s; transition-duration: 1400ms;}
     .text{width: fit-content; height: fit-content;
       position: absolute; bottom: 12%; left: 7.6%; color: #fff;}
-    .text h3{font-size: 60px; font-family: $eng-point; margin-bottom: 30px; line-height: 1.2;}
+    .text h3{font-size: 60px; font-family: $eng-point; margin-bottom: 15px; line-height: 1.2;}
     .text p{font-size: 14px; line-height: 1.6;
       font-family: $Hahmlet-Regular; margin-bottom: 30px;}
     .text .btns{display: flex; justify-content: flex-start; align-items: center;}
@@ -182,7 +182,7 @@ header.scrolled{
       position: absolute; bottom: calc(50% - 160px); left: 7.6%; color: #fff;}
     .text h5{font-size: 14px; font-weight: 500; font-family: $Hahmlet-Regular;
       margin-bottom: 20px;}
-    .text h3{font-size: 60px; font-family: $eng-point; margin-bottom: 30px; line-height: 1.2;}
+    .text h3{font-size: 60px; font-family: $eng-point; margin-bottom: 20px; line-height: 1.2;}
     .text p{font-size: 14px; line-height: 1.6;
       font-family: $Hahmlet-Regular; margin-bottom: 30px;}
     .text span{display: flex; justify-content: center; align-items: center;
@@ -278,7 +278,7 @@ header.scrolled{
 
     .item-wrap{display: flex; flex-wrap: nowrap;
       width: 100%; height: 100%;}
-    .box{width: 25%; height: 510px;}
+    .box{width: 25%; height: 510px; flex-shrink: 0;}
     .box a{width: 100%; height: 100%;
       display: flex; flex-direction: column;
       justify-content: center; align-items: center;}
@@ -382,18 +382,18 @@ footer{
         background: url(../img/up-darkred.png) no-repeat center;
         background-size: contain;}
 
-      .dep-a{width: 18.75%; height: $footer-height; padding-left: 15px;
+      .dep-a{width: 25%; height: $footer-height; padding-left: 15px;
         li{width: fit-content; margin-bottom: 15px;
           font-size: 18px; line-height: 1.8; font-weight: 700;
           font-family: $AritaDotum-Bold;}
         li:hover{color: $light;}
       } // .dep-a
-      .dep-b{width: 18.75%; height: $footer-height; padding-left: 15px;
+      .dep-b{width: 25%; height: $footer-height; padding-left: 15px;
         li{width: fit-content; margin-bottom: 15px;
           font-size: 14px; line-height: 1.4; font-weight: 500;}
         li:hover{color: $light;}
       } // .dep-b
-      .info{width: 37.5%; height: $footer-height; padding-left: 15px;
+      .info{width: 50%; height: $footer-height; padding-left: 15px;
         .left{float: left; width: 50%;}
         .right{float: left; width: 50%;}
         li{width: fit-content; margin-bottom: 15px;
@@ -598,7 +598,7 @@ footer{
       .text span{height: 40px !important; padding: 2px 30px !important;}
     } // #main-view-a
     #main-view-b{
-      .text{bottom: 14% !important; left: 0 !important;
+      .text{bottom: 12% !important; left: 0 !important;
         width: 100% !important;
         display: flex; justify-content: center; align-items: center;
         flex-direction: column;}
@@ -619,16 +619,9 @@ footer{
       span.active::before{animation: none !important;}
     } // .pager
 
-    .mouse{height: 65px !important;
-      p{font-size: 9px !important;}
-      i{height: 45px !important;}
-      i::after{height: 45px !important;}
-    } // .mouse
+    .mouse p{font-size: 9px !important;}
 
-    #select{
-      #select-btn{width: 26%;}
-      #select-sub .box{margin-left: 20px;}
-    } // #select
+    #select #select-btn{width: 26%;}
 
     #large-view{
       justify-content: center; flex-direction: column;
@@ -687,7 +680,6 @@ footer{
     #select #select-btn{width: 40% !important; margin-bottom: 60px !important;}
     #select-sub article .swiper-scrollbar{width: 80% !important;}
     #select-sub article .prev{right: 8% !important;}
-    #select-sub .box{margin: 0 55px !important;}
 
     #large-view{
       .box{
