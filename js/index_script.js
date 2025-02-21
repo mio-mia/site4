@@ -267,3 +267,9 @@ footerMediaQueryList.addEventListener('change', (event) => {
 if (footerMediaQueryList.matches) {
   handleFooterAccordion();
 }
+
+window.addEventListener('resize', function(){
+  if (footerMediaQueryList.matches) {
+    handleFooterAccordion();
+  }
+});
